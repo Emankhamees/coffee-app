@@ -2,7 +2,7 @@ class CoffeeModel {
   String image;
   String name;
   String type;
-  String price;
+  double price;
   
   CoffeeModel({
     required this.image,

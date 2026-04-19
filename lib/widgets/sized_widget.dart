@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 
 class SizedWidget extends StatelessWidget {
-  const SizedWidget({super.key, required this.text });
-   final String text;
+  const SizedWidget({super.key,  });
+   
 
   @override
   Widget build(BuildContext context) {
@@ -18,8 +18,8 @@ class SizedWidget extends StatelessWidget {
                  width: 1,
     ),
                 ),
-                child: Center(
-                  child: Text(text,
+                child:const  Center(
+                  child: Text("S",
                   style: TextStyle(
                     fontSize: 18
                   ),),

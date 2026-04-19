@@ -17,7 +17,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
         children: [
           Expanded(
             flex: 2,
-            child: Container(
+            child: SizedBox(
               width: double.infinity,
               child: Image.asset("assets/images/Onboarding.png",
               fit: BoxFit.cover,),
@@ -27,18 +27,18 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
             flex: 1,
             child: Column(
               children: [
-                Text(" Fall In Love With\n Coffee In Blissful\n        Delight!",style: 
+               const  Text(" Fall In Love With\n Coffee In Blissful\n        Delight!",style: 
                 TextStyle(
                   color: Colors.white,
                   fontSize: 30,
                   fontWeight: FontWeight.bold
                 ),),
-                Text("Welcom To Our Cozy Coffee Corner.Where\n          Every Cup Is Delightful for you",
+              const   Text("Welcom To Our Cozy Coffee Corner.Where\n          Every Cup Is Delightful for you",
                 style: TextStyle(
                   color: Colors.grey,
                   fontSize: 16
                 ),),
-                SizedBox(
+               const  SizedBox(
                   height: 15,
                 ),
                 ElevatedButton(
@@ -53,8 +53,8 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                     Navigator.push(context,
                      MaterialPageRoute(builder: (context) => const HomeScreen()));
                   },
-                 child: Text("Get Started",style: TextStyle(
-                  color: const Color.fromARGB(255, 224, 220, 220),
+                 child:const  Text("Get Started",style: TextStyle(
+                  color:  Color.fromARGB(255, 224, 220, 220),
                   fontSize: 20,
                   
                  ),)

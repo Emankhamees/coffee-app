@@ -21,14 +21,14 @@ class CoffeeWidget extends StatelessWidget {
           Image.asset(coffee.image,width: 400,
           height: 140,),
          
-          Text(coffee.name,style: TextStyle(fontWeight: FontWeight.bold)),
-          Text(coffee.type,style: TextStyle(color: Colors.grey),
+          Text(coffee.name,style:const  TextStyle(fontWeight: FontWeight.bold)),
+          Text(coffee.type,style: const TextStyle(color: Colors.grey),
         
             ),
-            SizedBox(
+           const  SizedBox(
               height: 30,
             ),
-          Text(coffee.price,style: TextStyle(
+          Text("\$ ${coffee.price.toStringAsFixed(2)}",style: const TextStyle(
                 color: Colors.black,
                 fontWeight: FontWeight.bold,
               ),),

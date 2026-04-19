@@ -19,25 +19,25 @@ class _HomeScreenState extends State<HomeScreen> {
     CoffeeModel(
     name: "Caffe Mocha",
     type: "Deep Foam",
-    price: "\$4.53",
+    price: 4.53,
     image: "assets/images/Image & Rating.png",
   ),
    CoffeeModel(
     name: "Flat White",
     type: "Espsores",
-    price: "\$3.53",
+    price: 3.53,
     image: "assets/images/Image & Rating (1).png",
   ),
    CoffeeModel(
     name: "Latte",
     type: "Deep Foam",
-    price: "\$3.53",
+    price: 3.53,
     image: "assets/images/Image & Rating (2).png",
   ),
   CoffeeModel(
     name: "Americano",
     type: "Espsores",
-    price: "\$3.52",
+    price: 3.52,
     image: "assets/images/Image & Rating (3).png",
   ),
   ];
@@ -58,11 +58,11 @@ class _HomeScreenState extends State<HomeScreen> {
         selectedItemColor: Colors.orange,
         unselectedItemColor: Colors.grey,
         backgroundColor: Colors.white,
-        items:  [
-        BottomNavigationBarItem(icon: Icon(Icons.home),label: "Home"),
-         BottomNavigationBarItem(icon: Icon(Icons.notifications),label: "notification"),
-          BottomNavigationBarItem(icon:Icon( Icons.favorite_outline_sharp),label: "favorite"),
-           BottomNavigationBarItem(icon: Icon(Icons.lock),label: "lock"),
+        items:  const [
+       BottomNavigationBarItem(icon: Icon(Icons.home),label: "Home"),
+       BottomNavigationBarItem(icon: Icon(Icons.notifications),label: "notification"),
+       BottomNavigationBarItem(icon:Icon( Icons.favorite_outline_sharp),label: "favorite"),
+       BottomNavigationBarItem(icon: Icon(Icons.lock),label: "lock"),
         
       ]),
       body: Column(
@@ -80,7 +80,7 @@ class _HomeScreenState extends State<HomeScreen> {
                     height: 50,
                   ),
                  const Padding(
-                    padding: const EdgeInsets.only(right: 250),
+                    padding: EdgeInsets.only(right: 250),
                     child: Text("Location",
                     style: TextStyle(
                       color: Colors.grey
@@ -151,7 +151,7 @@ class _HomeScreenState extends State<HomeScreen> {
               child: Image.asset("assets/images/Banner.png"))
             ]
           ),
-          SizedBox(
+         const  SizedBox(
             height: 100,
           ),
           SizedBox(
@@ -160,7 +160,7 @@ class _HomeScreenState extends State<HomeScreen> {
               scrollDirection: Axis.horizontal,
                itemCount: coffee.length,
                 separatorBuilder: (co,val){
-                  return SizedBox(
+                  return const SizedBox(
                     width: 20,
                   );
                 },
@@ -197,7 +197,7 @@ class _HomeScreenState extends State<HomeScreen> {
           Expanded(
             child: GridView.builder(
               shrinkWrap: true,
-              gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+              gridDelegate:const  SliverGridDelegateWithFixedCrossAxisCount(
               crossAxisCount: 2,
               crossAxisSpacing: 2,
               mainAxisSpacing: 2,
@@ -207,7 +207,7 @@ class _HomeScreenState extends State<HomeScreen> {
               return GestureDetector(
                 onTap: () {
                    Navigator.push(context,
-                       MaterialPageRoute(builder: (context) => const DetailScreen()));
+                       MaterialPageRoute(builder: (context) => DetailScreen(coffee: coffeee[index],)));
                 },
                 child: CoffeeWidget(coffee: coffeee[index]));
              }),
